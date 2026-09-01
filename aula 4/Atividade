@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"
+    <title>Cadastre seus animes favoritos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cadastre seus animes favoritos</h1>
+    </header>
+    <main> 
+        <section>
+            <h2>Cadastre seus animes</h2>
+            <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+                <p>Preencha o formulário para cadastrar seus animes favoritos</p>
+                <fieldset>
+                    <legend>Dados do Anime</legend>
+                    <div>
+                        <label for="foto_id">Foto:</label>
+                        <input id="foto_id" name="foto" type="file" accept="image/*">
+                    </div>
+                    <div>
+                        <label for="nome_id">Nome do Anime:</label>
+                        <input id="nome_id" name="nome" type="text" placeholder="Digite o nome do anime">
+                    </div>
+                    
+                </fieldset>    
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
