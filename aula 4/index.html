@@ -1,35 +1,186 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8"
-    <title>Cadastre seus animes favoritos</title>
+    <meta charset="UTF-8">
+    <title>Meus Animes Favoritos</title>
 </head>
 
 <body>
     <header>
-        <h1>Cadastre seus animes favoritos</h1>
+        <h1>Meus Animes Favoritos</h1>
     </header>
-    <main> 
+
+    <main>
         <section>
-            <h2>Cadastre seus animes</h2>
-            <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
-                <p>Preencha o formulário para cadastrar seus animes favoritos</p>
+            <h2>Registre seus Animes Favoritos</h2>
+
+            <form action="https://postman-echo.com/post" method="post"
+                  enctype="multipart/form-data">
+
+                <p>Preencha o formulário para registrar seus animes favoritos</p>
+
                 <fieldset>
                     <legend>Dados do Anime</legend>
+
                     <div>
-                        <label for="foto_id">Foto:</label>
-                        <input id="foto_id" name="foto" type="file" accept="image/*">
+                        <label for="capa_id">Capa do anime:</label>
+                        <input id="capa_id" name="capa" type="file" accept="image/*">
                     </div>
+
                     <div>
-                        <label for="nome_id">Nome do Anime:</label>
-                        <input id="nome_id" name="nome" type="text" placeholder="Digite o nome do anime">
+                        <label for="nome_id">Nome do anime:</label>
+                        <input id="nome_id" name="nome" type="text"
+                               placeholder="Ex: One Piece">
                     </div>
-                    
-                </fieldset>    
+
+                    <div>
+                        <label for="episodios_id">Quantidade de episódios:</label>
+                        <input id="episodios_id" name="episodios" type="number"
+                               placeholder="Ex: 1000">
+                    </div>
+
+                    <div>
+                        <label for="data_id">Data de lançamento:</label>
+                        <input id="data_id" name="data" type="date">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações do Anime</legend>
+
+                    <div>
+                        <label for="genero_id">Gênero:</label>
+                        <input id="genero_id" name="genero" type="text"
+                               placeholder="Ex: Ação, Aventura">
+                    </div>
+
+                    <div>
+                        <label for="personagem_id">Personagem favorito:</label>
+                        <input id="personagem_id" name="personagem" type="text"
+                               placeholder="Ex: Luffy">
+                    </div>
+
+                    <div>
+                        <label for="estudio_id">Estúdio:</label>
+                        <input id="estudio_id" name="estudio" type="text"
+                               placeholder="Ex: Toei Animation">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Sobre o Anime</legend>
+
+                    <div>
+                        <label for="resumo_id">Por que você gosta desse anime?</label>
+
+                        <textarea id="resumo_id"
+                                  name="resumo"
+                                  rows="10"
+                                  cols="100"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tipo de Anime</legend>
+
+                    <div>
+                        <input id="shonen_id"
+                               name="tipo"
+                               type="radio"
+                               value="shonen">
+
+                        <label for="shonen_id">Shonen</label>
+                    </div>
+
+                    <div>
+                        <input id="shojo_id"
+                               name="tipo"
+                               type="radio"
+                               value="shojo">
+
+                        <label for="shojo_id">Shoujo</label>
+                    </div>
+
+                    <div>
+                        <input id="seinen_id"
+                               name="tipo"
+                               type="radio"
+                               value="seinen">
+
+                        <label for="seinen_id">Seinen</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Gêneros Favoritos</legend>
+
+                    <div>
+                        <input id="tec_acao_id"
+                               name="genero_favorito"
+                               type="checkbox"
+                               value="acao">
+
+                        <label for="tec_acao_id">Ação</label>
+                    </div>
+
+                    <div>
+                        <input id="tec_aventura_id"
+                               name="genero_favorito"
+                               type="checkbox"
+                               value="aventura">
+
+                        <label for="tec_aventura_id">Aventura</label>
+                    </div>
+
+                    <div>
+                        <input id="tec_comedia_id"
+                               name="genero_favorito"
+                               type="checkbox"
+                               value="comedia">
+
+                        <label for="tec_comedia_id">Comédia</label>
+                    </div>
+
+                    <div>
+                        <input id="tec_romance_id"
+                               name="genero_favorito"
+                               type="checkbox"
+                               value="romance">
+
+                        <label for="tec_romance_id">Romance</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Onde você assiste?</legend>
+
+                    <div>
+                        <label for="plataforma_id">Plataforma:</label>
+
+                        <select id="plataforma_id" name="plataforma">
+                            <option value="crunchyroll">Crunchyroll</option>
+                            <option value="netflix">Netflix</option>
+                            <option value="prime_video">Prime Video</option>
+                            <option value="outra">Outra</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <button type="reset">Limpar dados</button>
+                    <button type="submit">Registrar anime</button>
+                </div>
+
             </form>
         </section>
     </main>
+
+    <footer>
+        <p>Todos os direitos reservados</p>
+    </footer>
+
 </body>
 
 </html>
