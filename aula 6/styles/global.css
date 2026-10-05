@@ -61,3 +61,85 @@ footer {
     padding: 0.5rem;
     width: 5rem;
 }
+
+.container-flex {
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.container-flex .item {
+    padding: 0.5rem;
+    border: 2px solid black;
+    flex-basis: 100px;
+    flex-shrink: 1;
+    flex-grow: 0;
+}
+
+#item-2 {
+    flex-grow: 1;
+}
+
+#item-3 {
+    flex-grow: 5;
+}
+
+.container-grid {
+    display: grid;
+    border: 5px solid black;
+    grid-template-columns: 1fr 1fr 5fr;
+    grid-auto-rows: minmax(100px, auto);
+    gap: 0.5rem;
+    background-color: black;
+}
+
+.container-grid .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.container-grid-area {
+    display: grid;
+    border: 5px solid black;
+    grid-template-areas: 
+      "cabecalho cabecalho"
+      "principal artigo"
+      "rodape rodape";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 5fr 3fr 1fr;
+    height: 200px;
+    
+}
+
+.container-grid-area div {
+    display: flex;
+    border: 4px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-grid-area .item-cabecalho {
+    grid-area: cabecalho;
+    background-color: purple;
+}
+
+.container-grid-area .item-principal {
+    grid-area: principal;
+    background-color: mediumvioletred;
+}
+
+.container-grid-area .item-artigo {
+    grid-area: artigo;
+    background-color: violet;
+}
+
+.container-grid-area .item-rodape {
+    grid-area: rodape;
+    background-color: palevioletred;
+}
