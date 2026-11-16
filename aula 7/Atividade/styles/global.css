@@ -1,0 +1,166 @@
+:root {
+  --bg-primary: #0a0a0f;     
+  --bg-secondary: #12121c;    
+  --bg-card: #1a1a2e;        
+  --accent-purple: #8a2be2;  
+  --accent-light: #b026ff;    
+  --purple-glow: rgba(138, 43, 226, 0.35); 
+  --text-main: #f3f4f6;        
+  --text-muted: #9ca3af;      
+  --border-color: #2a2a40;    
+  --error-color: #ff4d4d;     
+  --success-color: #00ffcc;   
+}
+
+/* --- RESET GLOBAL --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* --- CABEÇALHO E RODAPÉ --- */
+header, footer {
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+header h1 {
+  color: var(--accent-light);
+  font-size: 2rem;
+  text-shadow: 0 0 10px var(--purple-glow);
+  letter-spacing: 1px;
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+main {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 15px var(--purple-glow);
+  margin: 20px 0;
+}
+
+main h2 {
+  color: var(--text-main);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--accent-purple);
+  padding-bottom: 8px;
+}
+
+/* --- ESTILIZAÇÃO DO FORMULÁRIO --- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Efeito ao focar nos inputs (Foco em roxo brilhante) */
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 8px var(--purple-glow);
+  background-color: #161625;
+}
+
+/* Checkbox estilizado */
+label input[type="checkbox"] {
+  accent-color: var(--accent-purple);
+  margin-right: 8px;
+  transform: scale(1.1);
+}
+
+/* --- BOTÃO DE ENVIO --- */
+button[type="submit"], button {
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-light));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px var(--purple-glow);
+  margin-top: 10px;
+}
+
+button:hover {
+  filter: brightness(1.15);
+  box-shadow: 0 6px 18px rgba(176, 38, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* --- MENSAGENS DE ERRO E SUCESSO --- */
+.oculto {
+  display: none;
+}
+
+p[id^="erro-"] {
+  color: var(--error-color);
+  font-size: 0.85rem;
+  margin-top: -10px;
+  font-weight: 500;
+}
+
+#concluido {
+  color: var(--success-color);
+  background-color: rgba(0, 255, 204, 0.1);
+  border: 1px solid var(--success-color);
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
