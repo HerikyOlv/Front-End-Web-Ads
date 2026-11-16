@@ -1,12 +1,92 @@
 <!DOCTYPE html>
-<html lang="pr-br">
- <meta charset="UTF-8">
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/global.css">
-    <link rel="icon" href="./images/anime-icon.png" type="image/x-icon">
-    <title>Conhecendo os Displays</title>
+    <link rel="stylesheet" href="./style/global.css">
+    <title>Catálogo Tech - CSS Grid</title>
+
 </head>
 <body>
-    
+
+    <div class="layout-grid-area">
+        
+        <header class="cabecalho">
+            <h1>Catálogo Tech Store</h1>
+            <p>Equipamentos para setup e desenvolvimento</p>
+        </header>
+
+        <aside class="lateral">
+            <h2>Categorias</h2>
+            <ul>
+                <li>Teclados Mecânicos</li>
+                <li>Mouses Gamer</li>
+                <li>Monitores</li>
+                <li>Headsets</li>
+                <li>Cadeiras</li>
+            </ul>
+        </aside>
+
+        <main class="principal">
+            <h2>Produtos em Destaque</h2>
+            
+            <div class="catalogo-grid">
+                
+                <div class="card-produto">
+                    <img src="./images/images.jpeg" alt="Teclado Mecânico RGB" class="foto-produto">                    <h3>Teclado Mecânico RGB</h3>
+                    <p>Switch Brown, layout ABNT2, estrutura em alumínio.</p>
+                    <div class="preco">R$ 349,90</div>
+                    <button>Ver Detalhes</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="./images/images1.jpeg" alt="Mouse Sem Fio Pro" class="foto-produto">                    <h3>Teclado Mecânico RGB</h3>
+                    <h3>Mouse Sem Fio Pro</h3>
+                    <p>Sensor óptico 25K DPI, bateria de até 70 horas.</p>
+                    <div class="preco">R$ 289,90</div>
+                    <button>Ver Detalhes</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="./images/images2.jpeg" alt="Monitor 27" IPS 144Hz" class="foto-produto">                    <h3>Teclado Mecânico RGB</h3>
+                    <h3>Monitor 27" IPS 144Hz</h3>
+                    <p>Resolução Full HD, tempo de resposta 1ms, FreeSync.</p>
+                    <div class="preco">R$ 1.299,00</div>
+                    <button>Ver Detalhes</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="./images/images3.jpeg" alt="Headset Surround 7.1" class="foto-produto">                    <h3>Teclado Mecânico RGB</h3>
+                    <h3>Headset Surround 7.1</h3>
+                    <p>Microfone com cancelamento de ruído e almofadas macias.</p>
+                    <div class="preco">R$ 219,90</div>
+                    <button>Ver Detalhes</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="./images/images4.jpeg" alt="Webcam Full HD 1080p class="foto-produto">                    <h3>Teclado Mecânico RGB</h3>
+                    <h3>Webcam Full HD 1080p</h3>
+                    <p>Foco automático e correção de baixa luminosidade.</p>
+                    <div class="preco">R$ 189,90</div>
+                    <button>Ver Detalhes</button>
+                </div>
+
+                <div class="card-produto">
+                    <img src="./images/images5.jpeg" alt="Suporte Articulado" class="foto-produto">                    <h3>Teclado Mecânico RGB</h3>
+                    <h3>Suporte Articulado</h3>
+                    <p>Pistão a gás para monitores de 17" até 32".</p>
+                    <div class="preco">R$ 159,90</div>
+                    <button>Ver Detalhes</button>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="rodape">
+            <p>Tecnologia é o Futuro.</p>
+        </footer>
+
+    </div>
+
 </body>
 </html>
